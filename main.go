@@ -1,11 +1,11 @@
 package gocodecs
 
-type Encoder struct {
+type Coder struct {
 	Encode func(string) []byte
 	Decode func([]byte) string
 }
 
-func (e *Encoder) Init() {
+func (e *Coder) Init() {
 	e.Encode = encodeUTF8
 	e.Decode = decodeUTF8
 }
